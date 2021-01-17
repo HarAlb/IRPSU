@@ -1,0 +1,14 @@
+.buttons-group{
+    top: 0;
+    right: 0;
+}
+.substance-list span::after{
+    content: '|';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 120%;
+}
+.select2-selection__rendered .select2-search.select2-search--inline{
+    display: none;
+}
