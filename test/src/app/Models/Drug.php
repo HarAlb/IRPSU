@@ -31,7 +31,10 @@ class Drug extends Model
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function substancesNotPrimary(){
-        return $this->substances()->where('drug_substance.visible' , 1);
+        return $this->substances()->where([
+            ['drug_substance.visible' , '=' ,1],
+            ['substances.visible' , '=' ,1],
+        ]);
     }
 
     public function relations(){
